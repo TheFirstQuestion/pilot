@@ -26,7 +26,7 @@
 }
 
 /* hide GG box */
-#GG-leftQuad{
+#GG-leftQuad {
     visibility: hidden;
 }
 
@@ -34,16 +34,18 @@
 .item > * {
     position: absolute;
 }
-.mode{
-    background: pink
-}
-.darkmode{
-    background: black;
-    color: white;
 
-
+body {
+    background: #ddd;
+    color: #333;
 }
-.darkmode     .item {
+
+.darkmode {
+    background: #333;
+    color: #ddd;
+}
+
+.darkmode .item {
     border: 1px solid white;
     padding-left: 20px;
     position: relative;
@@ -51,9 +53,16 @@
 
 #disclaimerMsg {
     background-color: yellow;
-    width: 475px;
     font-size: 20px;
     top: -22px;
+}
+
+button {
+    top: 80px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* ******************************************** */
@@ -120,81 +129,72 @@ label {
 /* ******************************************** */
 /* positioning for each person's controls */
 
-/* ***** EMILY ***** */
-#Emily-rightQuad .name-header {
-    /* left: 80%; */
+/* ***** Lecturer ***** */
+#Lecturer-rightQuad .name-header {
+    left: 80%;
     top: 72%;
     font-size: 30px;
-    right: 80%;
     /* font-size: 100%; */
 }
 
-#Emily-rightQuad .updateMsg {
+#Lecturer-rightQuad .updateMsg {
     left: 80%;
     top: 55%;
     /* font-size: 20px; */
 }
 
-#Emily-rightQuad .slider-volume {
+#Lecturer-rightQuad .slider-volume {
     top: 7%;
 }
 
-#Emily-rightQuad .slider-brightness {
+#Lecturer-rightQuad .slider-brightness {
     top: 7%;
     left: 50%;
 }
 
-#Emily-rightQuad .checkbox-blur {
-    top: 42%;
-    /* left: 77%; */
-    right: 40rem;
-    width: 3rem;
+#Lecturer-rightQuad .checkbox-blur {
+    top: 30%;
+    left: 77%;
 }
 
-#Emily-rightQuad .checkbox-monochrome {
+#Lecturer-rightQuad .checkbox-monochrome {
     top: 45%;
-    /* left: 79.5%; */
+    left: 79.5%;
 }
 
 
-/* ***** ZAHRA ***** */
-#Zahra-leftQuad .name-header {
+/* ***** Student ***** */
+#Student-leftQuad .name-header {
     /* left: 1%; */
-    /* top: -8%; */
+    top: -5%;
     font-size: 30px;
-    width: 3rem;
-    left: 80%;
-    top: 55%;
-    right: 25rem
+    width: 5rem;
     /* font-size: 100%; */
 }
 
-#Zahra-leftQuad .updateMsg {
+#Student-leftQuad .updateMsg {
     /* left: 83%; */
-    top: 12%;
+    top: 18%;
     /* width: 20%; */
 }
 
-#Zahra-leftQuad .checkbox-blur {
+#Student-leftQuad .checkbox-blur {
     top: 42%;
     /* left: 1%; */
-    left: 79%;
-    right: 25rem;
-    width: 3rem;
 }
 
-#Zahra-leftQuad .checkbox-monochrome {
+#Student-leftQuad .checkbox-monochrome {
     top: 67%;
     /* left: 1%; */
 }
 
-#Zahra-leftQuad .slider-volume {
-    top: 6%;
+#Student-leftQuad .slider-volume {
+    top: 89%;
     /* left: 1% */
 }
 
-#Zahra-leftQuad .slider-brightness {
-    top: 7%;
+#Student-leftQuad .slider-brightness {
+    top: 89%;
     left: 50%;
 }
 
@@ -231,4 +231,3 @@ label {
     top: 89%;
     left: 50%;
 }
-
