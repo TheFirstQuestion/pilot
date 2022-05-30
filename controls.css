@@ -122,9 +122,10 @@ label {
 
 /* ***** EMILY ***** */
 #Emily-rightQuad .name-header {
-    left: 80%;
+    /* left: 80%; */
     top: 72%;
     font-size: 30px;
+    right: 80%;
     /* font-size: 100%; */
 }
 
@@ -139,27 +140,32 @@ label {
 }
 
 #Emily-rightQuad .slider-brightness {
-    top: 7%;
+    /* top: 7%; */
     left: 50%;
 }
 
 #Emily-rightQuad .checkbox-blur {
     top: 20%;
-    left: 77%;
+    /* left: 77%; */
+    right: 32.5rem;
+    width: 3rem;
 }
 
 #Emily-rightQuad .checkbox-monochrome {
     top: 45%;
-    left: 79.5%;
+    /* left: 79.5%; */
 }
 
 
 /* ***** ZAHRA ***** */
 #Zahra-leftQuad .name-header {
     /* left: 1%; */
-    top: -8%;
+    /* top: -8%; */
     font-size: 30px;
-    width: 5rem;
+    width: 3rem;
+    left: 80%;
+    top: 55%;
+    right: 25rem
     /* font-size: 100%; */
 }
 
@@ -172,6 +178,9 @@ label {
 #Zahra-leftQuad .checkbox-blur {
     top: 42%;
     /* left: 1%; */
+    left: 79%;
+    right: 25rem;
+    width: 3rem;
 }
 
 #Zahra-leftQuad .checkbox-monochrome {
@@ -180,12 +189,12 @@ label {
 }
 
 #Zahra-leftQuad .slider-volume {
-    top: 89%;
+    top: 6%;
     /* left: 1% */
 }
 
 #Zahra-leftQuad .slider-brightness {
-    top: 89%;
+    /* top: 89%; */
     left: 50%;
 }
 
