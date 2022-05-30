@@ -1,0 +1,233 @@
+/* big-picture stuff  */
+.rectangle {
+    border: 1px solid black;
+    height: 80%;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    background-color: dodgerblue;
+    opacity: 0.25;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-auto-rows: 48vh;
+}
+
+.item {
+    border: 1px solid black;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* hide GG box */
+#GG-leftQuad {
+    visibility: hidden;
+}
+
+/* everything in the box will need to be explicitly positioned */
+.item > * {
+    position: absolute;
+}
+
+body {
+    background: #ddd;
+    color: #333;
+}
+
+.darkmode {
+    background: #333;
+    color: #ddd;
+}
+
+.darkmode .item {
+    border: 1px solid white;
+    padding-left: 20px;
+    position: relative;
+};
+
+#disclaimerMsg {
+    background-color: yellow;
+    font-size: 20px;
+    top: -22px;
+}
+
+button {
+    top: 80px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* ******************************************** */
+/* elements within each person box  */
+.name-header {
+    position: absolute;
+    font-size: 40px;
+}
+
+.updateMsg {
+    position: absolute;
+    color: #0067ee;
+    font-family: Helvetica;
+    visibility: hidden;
+    font-size: 16px;
+    padding-top: 5px;
+    width: 17%;
+}
+
+/* ******************************************** */
+/* sliders */
+input[type="range"] {
+    width: 200px; /* relative to label */
+    height: 15px;
+    border-radius: 5px;
+
+    /* overflow: hidden; */
+    /* width: 80px; */
+    /* -webkit-appearance: */
+    background-color: #9a905d;
+}
+
+/* input[type='range']::-webkit-slider-runnable-track {
+    height: 15px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  } */
+
+/* slider circle */
+/* input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #0067ee;
+    cursor: pointer;
+} */
+
+label {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    /* Disable selection of the label text */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* ******************************************** */
+/* positioning for each person's controls */
+
+/* ***** Lecturer ***** */
+#Lecturer-rightQuad .name-header {
+    left: 80%;
+    top: 72%;
+    font-size: 30px;
+    /* font-size: 100%; */
+}
+
+#Lecturer-rightQuad .updateMsg {
+    left: 80%;
+    top: 55%;
+    /* font-size: 20px; */
+}
+
+#Lecturer-rightQuad .slider-volume {
+    top: 7%;
+}
+
+#Lecturer-rightQuad .slider-brightness {
+    top: 7%;
+    left: 50%;
+}
+
+#Lecturer-rightQuad .checkbox-blur {
+    top: 30%;
+    left: 77%;
+}
+
+#Lecturer-rightQuad .checkbox-monochrome {
+    top: 45%;
+    left: 79.5%;
+}
+
+
+/* ***** Student ***** */
+#Student-leftQuad .name-header {
+    /* left: 1%; */
+    top: -5%;
+    font-size: 30px;
+    width: 5rem;
+    /* font-size: 100%; */
+}
+
+#Student-leftQuad .updateMsg {
+    /* left: 83%; */
+    top: 18%;
+    /* width: 20%; */
+}
+
+#Student-leftQuad .checkbox-blur {
+    top: 42%;
+    /* left: 1%; */
+}
+
+#Student-leftQuad .checkbox-monochrome {
+    top: 67%;
+    /* left: 1%; */
+}
+
+#Student-leftQuad .slider-volume {
+    top: 89%;
+    /* left: 1% */
+}
+
+#Student-leftQuad .slider-brightness {
+    top: 89%;
+    left: 50%;
+}
+
+
+/* ***** STEVEN ***** */
+#Steven-rightQuad .name-header {
+    left: 80%;
+    top: -8%;
+    font-size: 42px;
+    /* font-size: 100%; */
+}
+
+#Steven-rightQuad .updateMsg {
+    left: 80%;
+    top: 12%;
+}
+
+#Steven-rightQuad .checkbox-blur {
+    top: 42%;
+    left: 77%;
+}
+
+#Steven-rightQuad .checkbox-monochrome {
+    top: 67%;
+    left: 79.5%;
+}
+
+#Steven-rightQuad .slider-volume {
+    top: 89%;
+    /* left: 1% */
+}
+
+#Steven-rightQuad .slider-brightness {
+    top: 89%;
+    left: 50%;
+}
