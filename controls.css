@@ -25,24 +25,19 @@
     position: relative;
 }
 
-/* hide GG box */
-#GG-leftQuad {
-    visibility: hidden;
-}
-
 /* everything in the box will need to be explicitly positioned */
 .item > * {
     position: absolute;
 }
 
 body {
-    background: #ddd;
-    color: #333;
+    background: #eee;
+    color: #444;
 }
 
 .darkmode {
     background: #333;
-    color: #ddd;
+    color: #999;
 }
 
 .darkmode .item {
@@ -162,6 +157,16 @@ label {
     left: 79.5%;
 }
 
+#Lecturer-rightQuad img.bright-high {
+    top: 1%;
+    left: 93%;
+}
+
+#Lecturer-rightQuad img.bright-low {
+    top: 1%;
+    left: 64%;
+}
+
 
 /* ***** Student ***** */
 #Student-leftQuad .name-header {
@@ -189,13 +194,23 @@ label {
 }
 
 #Student-leftQuad .slider-volume {
-    top: 89%;
+    top: 86%;
     /* left: 1% */
 }
 
 #Student-leftQuad .slider-brightness {
-    top: 89%;
+    top: 86%;
     left: 50%;
+}
+
+#Student-leftQuad img.bright-high {
+    top: 91%;
+    left: 93%;
+}
+
+#Student-leftQuad img.bright-low {
+    top: 91%;
+    left: 64%;
 }
 
 
@@ -230,4 +245,12 @@ label {
 #Steven-rightQuad .slider-brightness {
     top: 89%;
     left: 50%;
+}
+
+
+/* ############################################ */
+/* Icons */
+
+img {
+    width: 24px;
 }

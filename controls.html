@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="controls.css" />
-    <title>ZoomControlz</title>
+    <title>PILOT</title>
 </head>
 
 <body>
@@ -15,32 +15,6 @@
             <button onclick="toggleDarkMode(darkmode)">Dark Mode</button>
         </div>
 
-        <!-- <div class="item" id="GG-leftQuad">
-            <div class="name-header">
-                <h2 class="GG">GG</h2>
-                <p id="GG-update"> </p>
-            </div>
-
-            <div class="leftButtonGroup">
-                <h3>Volume</h3>
-                <div class="slidecontainer">
-                    <input type="range" id="GG-volume" min="0" max="3" default="3" class="slider" onmouseup="toggle(this)">
-                </div>
-                <h3>Brightness</h3>
-                <div class="slidecontainer">
-                    <input type="range" id="GG-brightness" min="0" max="3" default="3" class="slider" onmouseup="toggle(this)">
-                </div>
-                <h3>Blur</h3>
-                <div class="slidecontainer">
-                    <input type="range" id="GG-blur" min="0" max="2" default="0" class="slider" onmouseup="toggle(this)">
-                </div>
-                <h3>Monochrome</h3>
-                <div class="slidecontainer">
-                    <input type="range" id="GG-monochrome" min="0" max="2" default="0" class="slider" onmouseup="toggle(this)">
-                </div>
-            </div>
-        </div> -->
-
         <!-- Upper right quadrant -->
         <div class="item" id="Lecturer-rightQuad">
             <h2 class="name-header">Lecturer</h2>
@@ -50,6 +24,9 @@
                 Volume
                 <input type="range" id="Lecturer-volume" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
             </label>
+
+            <img src="assets/bright-low-black.svg" class="bright-low"></img>
+            <img src="assets/bright-high-black.svg" class="bright-high"></img>
 
             <label class="slider-brightness">
                 Brightness
@@ -75,7 +52,6 @@
             <h2 class="name-header">Other Student</h2>
             <p class="updateMsg" id="Student-update"> </p>
 
-            <!-- <div class="leftButtonGroup"> -->
             <label class="checkbox-blur">
                 Blur <br> Background
                 <br>
@@ -92,6 +68,9 @@
                 Volume
                 <input type="range" id="Student-volume" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
             </label>
+
+            <img src="assets/bright-low-black.svg" class="bright-low"></img>
+            <img src="assets/bright-high-black.svg" class="bright-high"></img>
 
             <label class="slider-brightness">
                 Brightness
