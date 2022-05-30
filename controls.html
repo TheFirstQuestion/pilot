@@ -4,6 +4,12 @@
 <head>
     <link rel="stylesheet" href="controls.css" />
     <title>PILOT</title>
+    <script>
+        // Loads the slack.js file and sendSlack() function
+        let script = document.createElement("script");
+        script.src = "slack.js";
+        document.head.appendChild(script);
+    </script>
 </head>
 
 <body>
@@ -19,13 +25,14 @@
         <div class="item" id="Lecturer-rightQuad">
             <h2 class="name-header">Lecturer</h2>
             <p class="updateMsg" id="Lecturer-update"> </p>
-            <img src="volume-low-black.svg" style="width: 2rem; top: 0%; left: 14%;"></img>
+
+            <img src="assets/volume-low-black.svg" style="width: 2rem; top: 0%; left: 14%;"></img>
+            <img src="assets/volume-high-black.svg" style="width: 2rem;  left: 40%;"></img>
 
             <label class="slider-volume">
                 Volume
                 <input type="range" id="Lecturer-volume" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
             </label>
-            <img src="volume-high-black.svg" style="width: 2rem;  left: 40%;"></img>
 
             <img src="assets/bright-low-black.svg" class="bright-low"></img>
             <img src="assets/bright-high-black.svg" class="bright-high"></img>
@@ -65,21 +72,17 @@
                 <br>
                 <input type="checkbox" id="Student-monochrome" onclick="toggle(this)">
             </label> -->
-            <img src="volume-low-black.svg" style="width: 2rem; top: 0%; left: 14%;"></img>
+            <img src="assets/volume-low-black.svg" style="width: 2rem; top: 0%; left: 14%;"></img>
+            <img src="assets/volume-high-black.svg" style="width: 2rem;  left: 40%;"></img>
 
             <label class="slider-volume">
                 Volume
                 <input type="range" id="Student-volume" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
             </label>
-            <img src="volume-high-black.svg" style="width: 2rem;  left: 40%;"></img>
 
-<<<<<<< HEAD
             <img src="assets/bright-low-black.svg" class="bright-low"></img>
             <img src="assets/bright-high-black.svg" class="bright-high"></img>
 
-=======
-            <img src="black-low-bright.svg" style="width: 2.5rem; top: -1%; left: 65%;"></img>
->>>>>>> 1bb17ce236f8cd21d48d012ed4b88fcc68154848
             <label class="slider-brightness">
                 Brightness
                 <input type="range" id="Student-brightness" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
@@ -141,7 +144,7 @@
         const whichThing = elem.id.split("-")[1].toLowerCase();
 
         if (whichThing === "volume") {
-            num == 0 ? percent = "0% (will revert in 10s)" : (num == 1 ? percent = "25%" : (num == 2 ? percent = "50%" : (num == 3 ? percent = "75%" : percent = "100%")));
+            num == 0 ? percent = "0%" : (num == 1 ? percent = "25%" : (num == 2 ? percent = "50%" : (num == 3 ? percent = "75%" : percent = "100%")));
         } else if (whichThing === "brightness") {
             num == 0 ? percent = "0%" : (num == 1 ? percent = "25%" : (num == 2 ? percent = "50%" : (num == 3 ? percent = "75%" : percent = "100%")));
         } else if (whichThing === "blur") {
@@ -176,13 +179,7 @@
         */
     }
 
-    async function sendSlack(message) {
-        console.log(message);
-        fetch("https://hooks.slack.com/workflows/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", {
-            method: 'POST',
-            body: JSON.stringify({ "message": message }),
-        });
-    }
+
 </script>
 
 </html>
