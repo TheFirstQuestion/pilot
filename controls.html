@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="controls.css" />
+    <title>ZoomControlz</title>
+</head>
+
+<body>
+    <div class="rectangle"></div>
+    <button onclick="darkmodefunction(darkmode)">Dark Mode</button>
+    <div class="grid">
+        <!-- Upper left quadrant, most likely will hide this one -->
+        <!-- <div class="item">
+
+            <h4 id="disclaimerMsg">Disclaimer: Any changes made will only be reflected for you. Changes will not be seen
+                or heard by others.</h4>
+        </div> -->
+
+        <!-- <div class="item" id="GG-leftQuad">
+            <div class="name-header">
+                <h2 class="GG">GG</h2>
+                <p id="GG-update"> </p>
+            </div>
+
+            <div class="leftButtonGroup">
+                <h3>Volume</h3>
+                <div class="slidecontainer">
+                    <input type="range" id="GG-volume" min="0" max="3" default="3" class="slider" onmouseup="toggle(this)">
+                </div>
+                <h3>Brightness</h3>
+                <div class="slidecontainer">
+                    <input type="range" id="GG-brightness" min="0" max="3" default="3" class="slider" onmouseup="toggle(this)">
+                </div>
+                <h3>Blur</h3>
+                <div class="slidecontainer">
+                    <input type="range" id="GG-blur" min="0" max="2" default="0" class="slider" onmouseup="toggle(this)">
+                </div>
+                <h3>Monochrome</h3>
+                <div class="slidecontainer">
+                    <input type="range" id="GG-monochrome" min="0" max="2" default="0" class="slider" onmouseup="toggle(this)">
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Upper right quadrant -->
+        <div class="item" id="Emily-rightQuad">
+            <h2 class="name-header">Lecturer</h2>
+            <p class="updateMsg" id="Emily-update"> </p>
+
+            <label class="slider-volume">
+                Volume
+                <input type="range" id="Emily-volume" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
+            </label>
+
+            <img src="black-low-bright.svg" style="width: 2.5rem; top: 0%; left: 63%;"></img> <label
+                class="slider-brightness">
+                Brightness
+
+                <input type="range" id="Emily-brightness" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
+            </label>
+            <img src="black-high-bright.svg" style="width: 2rem; top: 2%; left: 95%;"></img>
+
+
+            <label class="checkbox-blur">
+                Blur Background
+                <br>
+                <input type="checkbox" id="Emily-blur" onclick="toggle(this)">
+            </label>
+            <!-- <input type="checkbox" id="Emily-blur" value="true" unchecked onclick="toggle(this)"> -->
+
+            <label class="checkbox-monochrome">
+                Monochrome
+                <br>
+                <input type="checkbox" id="Emily-monochrome" onclick="toggle(this)">
+            </label>
+        </div>
+
+        <!-- Lower left quadrant -->
+        <div class="item" id="Zahra-leftQuad">
+            <h2 class="name-header">Other Student</h2>
+            <p class="updateMsg" id="Zahra-update"> </p>
+
+            <!-- <div class="leftButtonGroup"> -->
+            <label class="checkbox-blur">
+                Blur <br> Background
+                <br>
+                <input type="checkbox" id="Zahra-blur" onclick="toggle(this)">
+            </label>
+
+            <label class="checkbox-monochrome">
+                Monochrome
+                <br>
+                <input type="checkbox" id="Zahra-monochrome" onclick="toggle(this)">
+            </label>
+
+            <label class="slider-volume">
+                Volume
+                <input type="range" id="Zahra-volume" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
+            </label>
+            <label class="slider-brightness">
+                Brightness
+                <input type="range" id="Zahra-brightness" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
+            </label>
+
+        </div>
+
+        <!-- Lower right quadrant -->
+        <!-- <div class="item" id="Steven-rightQuad">
+            <h2 class="name-header">Steven</h2>
+            <p class="updateMsg" id="Steven-update"> </p>
+
+            <label class="checkbox-blur">
+                Blur Background
+                <br>
+                <input type="checkbox" id="Steven-blur" onclick="toggle(this)">
+            </label>
+
+            <label class="checkbox-monochrome">
+                 Monochrome
+                 <br>
+                <input type="checkbox" id="Steven-monochrome" onclick="toggle(this)">
+            </label>
+
+            <label class="slider-volume">
+                Volume
+                <input type="range" id="Steven-volume" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
+            </label>
+
+            <label class="slider-brightness">
+                Brightness
+                <input type="range" id="Steven-brightness" min=0 max=4 default=3 value=3 onmouseup="toggle(this)">
+            </label>
+        </div> -->
+    </div>
+</body>
+
+<script>
+
+    let darkmode = false;
+    function darkmodefunction() {
+        darkmode = !darkmode;
+        console.log(darkmode)
+        if (!!darkmode) {
+            let testarray = document.getElementsByTagName("body")
+            console.log(testarray)
+            testarray[0].classList.remove("darkmode");
+        } else {
+            let testarray = document.getElementsByTagName("body")
+            console.log(testarray)
+            testarray[0].classList.add("darkmode");
+        }
+    }
+    function toggle(elem) {
+        let num = elem.value;
+        let percent = "";
+
+        const whomst = elem.id.split("-")[0].toUpperCase();
+        const whichThing = elem.id.split("-")[1].toLowerCase();
+
+        if (whichThing === "volume") {
+            num == 0 ? percent = "0% (will revert in 10s)" : (num == 1 ? percent = "25%" : (num == 2 ? percent = "50%" : (num == 3 ? percent = "75%" : percent = "100%")));
+        } else if (whichThing === "brightness") {
+            num == 0 ? percent = "0%" : (num == 1 ? percent = "25%" : (num == 2 ? percent = "50%" : (num == 3 ? percent = "75%" : percent = "100%")));
+        } else if (whichThing === "blur") {
+            elem.checked ? percent = "on" : percent = "off";
+        } else if (whichThing === "monochrome") {
+            elem.checked ? percent = "on" : percent = "off";
+        }
+
+        // Updates on-screen status label for user to see
+        const uiMsg = whichThing + " adjusted to " + percent;
+        const labelID = elem.id.split("-")[0] + "-update";
+        var label = document.getElementById(labelID);
+        label.style.visibility = "visible";
+        label.innerHTML = uiMsg;
+        // hide after a delay
+        setTimeout(function () {
+            label.style.visibility = "hidden";
+        }, 5 * 1000);
+
+        const message = whomst + ": " + whichThing + " " + percent.split("%")[0];
+        sendSlack(message);
+
+        // volume "springing" (away from muted) and back to starting volume of 75%
+        if (whichThing === "volume" && percent.split("%")[0] === "0") {
+            let delay = 10000;
+            setTimeout(sendSlack, delay, whomst + ": increase " + whichThing);
+            setTimeout(function () {
+                elem.value = 3;
+            }, delay);
+        }
+    }
+
+    async function sendSlack(message) {
+        console.log(message);
+        fetch("https://hooks.slack.com/workflows/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", {
+            method: 'POST',
+            body: JSON.stringify({ "message": message }),
+        });
+    }
+</script>
+
+</html>
