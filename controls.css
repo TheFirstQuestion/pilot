@@ -35,21 +35,9 @@ body {
     color: #444;
 }
 
-.darkmode {
-    background: #333;
-    color: #999;
-}
-
-.darkmode .item {
-    border: 1px solid white;
-    padding-left: 20px;
-    position: relative;
-};
-
 #disclaimerMsg {
-    background-color: yellow;
     font-size: 20px;
-    top: -22px;
+    top: -18px;
 }
 
 button {
@@ -112,6 +100,7 @@ label {
     font-weight: bold;
     text-align: center;
     display: block;
+    color: #666;
     /* Disable selection of the label text */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -167,6 +156,16 @@ label {
     left: 64%;
 }
 
+#Lecturer-rightQuad img.volume-high {
+    top: 1%;
+    left: 40%;
+}
+
+#Lecturer-rightQuad img.volume-low {
+    top: 1%;
+    left: 14%;
+}
+
 
 /* ***** Student ***** */
 #Student-leftQuad .name-header {
@@ -213,6 +212,16 @@ label {
     left: 64%;
 }
 
+#Student-leftQuad img.volume-high {
+    top: 91%;
+    left: 40%;
+}
+
+#Student-leftQuad img.volume-low {
+    top: 91%;
+    left: 14%;
+}
+
 
 /* ***** STEVEN ***** */
 #Steven-rightQuad .name-header {
@@ -254,3 +263,25 @@ label {
 img {
     width: 24px;
 }
+
+
+/* ############################################ */
+/* Dark Mode Changes */
+.darkmode {
+    background: #333;
+    color: #999;
+}
+
+.darkmode label {
+    color: #888;
+}
+
+.darkmode button {
+    background-color: #888;
+}
+
+.darkmode .item {
+    border: 1px solid white;
+    padding-left: 20px;
+    position: relative;
+};
