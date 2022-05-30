@@ -16,7 +16,7 @@
 .grid {
     display: grid;
     grid-template-columns: 49% 49%;
-    grid-auto-rows: 48vh;
+    grid-auto-rows: 49vh 48vh;
 }
 
 .item {
